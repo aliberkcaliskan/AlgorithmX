@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Header() {
     return (
-        <div className="bg-gainsboro w-full py-5 xl:px-40 lg:px-24 sm:px-12 shadow-3xl flex absolute">
+        <div className="bg-gainsboro w-full py-5 xl:px-40 lg:px-24 sm:px-12 shadow-3xl flex absolute z-10">
             <div className=' xl:w-6/12 md:w-4/12 flex'>
                 <img src="/assets/logo.svg" alt="logo" />
             </div>
