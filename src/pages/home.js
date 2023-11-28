@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from "react";
 import Header from "../component/header";
+import Footer from "../component/footer";
 import {Chart} from "primereact/chart";
 import Lottie from "react-lottie-player";
 import lottieJson from "../lottie/Sort.json";
 import lottieJson2 from "../lottie/Integration.json";
+import {InputText} from "primereact/inputtext";
+import {InputTextarea} from "primereact/inputtextarea";
 
 export default function Home() {
   const [chartData, setChartData] = useState({});
@@ -255,11 +258,108 @@ export default function Home() {
             audiences. We focus on simplifying marketing, enabling profound
             brand attraction at an unprecedented scale.
           </p>
-          <div className="mt-12  w-56 bg-white-0 text-darkBlue-200 py-3 px-5 font-semibold shadow-button rounded-md cursor-pointer">
+          <div className="mt-12 text-center w-56 bg-white-0 text-darkBlue-200 py-3 px-5 font-semibold shadow-button rounded-md cursor-pointer">
             Get in-dept details ->
           </div>
         </div>
       </div>
+      <div className="px-44 pb-20  pt-20 w-full h-full bg-gainsboro relative flex gap-8">
+        <div className="w-3/6 flex flex-col justify-between">
+          <div>
+            <img
+              className="p-2 shadow-button w-9 bg-white-0 absolute top-8"
+              src="/assets/stars-icon.svg"
+              alt="star-icon"
+            />
+            <h6 className="text-5xl font-bold">
+              Frequently Asked Questions about
+            </h6>
+            <h1 className=" text-5xl font-bold pt-4 leading-[48px] home-page-linear">
+              Growth <br /> Management <br /> Platform
+            </h1>
+          </div>
+          <div className="mt-12 text-center w-56 bg-white-0 text-darkBlue-200 py-3 px-5 font-semibold shadow-button rounded-md cursor-pointer">
+            Get in-dept details ->
+          </div>
+        </div>
+        <div className="w-3/6">
+          <div>
+            <h6 className="text-lg font-semibold text-grayx-100">
+              What is a Growth Management Platform (GMP)?
+            </h6>
+            <p className="pt-3 text-grayx-500">
+              A Growth Management Platform (GMP) is a comprehensive software
+              solution designed to streamline and optimize marketing, sales, and
+              business growth processes. It combines data analytics, user
+              behavior insights, and marketing automation to help businesses
+              achieve their growth goals.
+            </p>
+          </div>
+          <div>
+            <h6 className="pt-8 text-lg font-semibold text-grayx-100">
+              How is GMP different from other marketing tools?
+            </h6>
+            <p className="pt-3 text-grayx-500">
+              Unlike many other marketing tools that focus on specific aspects
+              of marketing, GMP offers an all-in-one solution. It integrates
+              analytics, segmentation, automation, and personalization to
+              provide a holistic approach to business growth, and that is
+              exactly what Algorithm X provides.
+            </p>
+          </div>
+          <div>
+            <h6 className="pt-8 text-lg font-semibold text-grayx-100">
+              What are the key features of a GMP?
+            </h6>
+            <p className="pt-3 text-grayx-500">
+              Key features include data integration, user behavior tracking,
+              segmentation, marketing automation, personalization, and
+              analytics, all working together to optimize marketing efforts and
+              drive sales growth.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="bg-white-0 flex justify-center p-20 ">
+        <div className="flex flex-col  items-center w-3/6">
+          <img
+            className="p-2 shadow-button w-9 bg-white-0"
+            src="/assets/stars-icon.svg"
+            alt="star-icon"
+          />
+          <h5 className="text-[40px] text-grayx-100 font-bold text-center">
+            Feel Free To <br /> Get In Touch With Us <br /> & Get More Info
+          </h5>
+          <div className="w-full pt-12 flex items-center flex-col">
+            <InputText
+              name="name"
+              placeholder="Name"
+              required
+              className="border-2 rounded-md p-3 border-lightGray w-full"
+            />
+            <InputText
+              name="email"
+              placeholder="E-mail"
+              required
+              className="border-2  mt-4 rounded-md p-3 border-lightGray w-full"
+            />
+            <InputTextarea
+              className="border-2  mt-4 rounded-md p-3 border-lightGray w-full"
+              name="message"
+              placeholder="Messsage"
+              rows={10}
+            />
+            <div className="bg-darkBlue-200 w-full mt-2 p-4 rounded-md text-center text-white-100 font-semibold cursor-pointer select-none">
+              Send Message
+            </div>
+
+            <div className="mt-12 text-center bg-white-0 text-darkBlue-200 py-3 px-5 font-semibold shadow-button rounded-md cursor-pointer">
+              There are more ways to contact us ->
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
